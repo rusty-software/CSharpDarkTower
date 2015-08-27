@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkTower.Game", "DarkTower.Game\DarkTower.Game.csproj", "{6003A293-E2F7-4B03-A910-C609DFF72309}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkTower.Game.Tests", "DarkTower.Game.Tests\DarkTower.Game.Tests.csproj", "{EB1F4E3E-9152-4F74-BF1C-C6F7EB475691}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6003A293-E2F7-4B03-A910-C609DFF72309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6003A293-E2F7-4B03-A910-C609DFF72309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6003A293-E2F7-4B03-A910-C609DFF72309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6003A293-E2F7-4B03-A910-C609DFF72309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB1F4E3E-9152-4F74-BF1C-C6F7EB475691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB1F4E3E-9152-4F74-BF1C-C6F7EB475691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB1F4E3E-9152-4F74-BF1C-C6F7EB475691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB1F4E3E-9152-4F74-BF1C-C6F7EB475691}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
