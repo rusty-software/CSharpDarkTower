@@ -1,4 +1,6 @@
-﻿namespace DarkTower.Game
+﻿using System;
+
+namespace DarkTower.Game
 {
     public class Player
     {
@@ -33,6 +35,30 @@
             HasBrassKey = false;
             HasSilverKey = false;
             HasGoldKey = false;
+        }
+
+        private int LimitToRange(int v, int min, int max)
+        {
+            if (v < min) { return min; }
+            if (v > max) { return max; }
+            return v;
+        }
+
+        public void SetGold(int gold)
+        {
+            var maxGold = Warriors * 6 + (HasBeast ? 50 : 0);
+            maxGold = (maxGold > 99) ? 99 : maxGold;
+            Gold = LimitToRange(gold, 0, maxGold);
+        }
+
+        public void AddBeast()
+        {
+            HasBeast = true;
+        }
+
+        public void SetWarriors(int warriors)
+        {
+            Warriors = warriors;
         }
     }
 }

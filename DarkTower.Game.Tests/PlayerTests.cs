@@ -22,5 +22,49 @@ namespace DarkTower.Game.Tests
             Assert.IsFalse(player.HasSilverKey);
             Assert.IsFalse(player.HasGoldKey);
         }
+
+        [TestMethod]
+        public void SetGold_Works()
+        {
+            var player = new Player();
+            player.SetGold(27);
+            Assert.AreEqual(27, player.Gold);
+        }
+
+        [TestMethod]
+        public void Gold_IsLimitedByWarriorCount()
+        {
+            var player = new Player();
+            player.SetWarriors(2);
+            player.SetGold(1000);
+            Assert.AreEqual(player.Warriors * 6, player.Gold);
+        }
+
+        [TestMethod]
+        public void Gold_LimitIncreasedByBeast()
+        {
+            var player = new Player();
+            player.SetWarriors(2);
+            player.AddBeast();
+            player.SetGold(1000);
+            Assert.AreEqual(player.Warriors * 6 + 50, player.Gold);
+        }
+
+        [TestMethod]
+        public void Gold_CannotExceed99()
+        {
+            var player = new Player();
+            player.SetWarriors(99);
+            player.SetGold(1000);
+            Assert.AreEqual(99, player.Gold);
+        }
+
+        [TestMethod]
+        public void Gold_CannotFallBelowZero()
+        {
+            var player = new Player();
+            player.SetGold(-27);
+            Assert.AreEqual(0, player.Gold);
+        }
     }
 }
