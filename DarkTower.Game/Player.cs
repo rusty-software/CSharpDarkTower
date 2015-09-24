@@ -51,14 +51,54 @@ namespace DarkTower.Game
             Gold = LimitToRange(gold, 0, maxGold);
         }
 
-        public void AddBeast()
+        public void SetFood(int food)
         {
-            HasBeast = true;
+            Food = food;
         }
 
         public void SetWarriors(int warriors)
         {
             Warriors = warriors;
+        }
+
+        public void AddScout()
+        {
+            HasScout = true;
+        }
+
+        public void AddHealer()
+        {
+            HasHealer = true;
+        }
+
+        public void AddBeast()
+        {
+            HasBeast = true;
+        }
+
+        public void AddSword()
+        {
+            HasSword = true;
+        }
+
+        public void AddPegasus()
+        {
+            HasPegasus = true;
+        }
+
+        public void AddBrassKey()
+        {
+            HasBrassKey = true;
+        }
+
+        public void AddSilverKey()
+        {
+            HasSilverKey = true;
+        }
+
+        public void AddGoldKey()
+        {
+            HasGoldKey = true;
         }
     }
 }

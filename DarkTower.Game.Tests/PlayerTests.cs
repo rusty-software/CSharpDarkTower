@@ -32,6 +32,87 @@ namespace DarkTower.Game.Tests
         }
 
         [TestMethod]
+        public void SetWarriors_Works()
+        {
+            var player = new Player();
+            player.SetWarriors(27);
+            Assert.AreEqual(27, player.Warriors);
+        }
+
+        [TestMethod]
+        public void SetFood_Works()
+        {
+            var player = new Player();
+            player.SetFood(27);
+            Assert.AreEqual(27, player.Food);
+        }
+
+        [TestMethod]
+        public void AddScout_Works()
+        {
+            var player = new Player();
+            player.AddScout();
+            Assert.IsTrue(player.HasScout);
+        }
+
+        [TestMethod]
+        public void AddHealer_Works()
+        {
+            var player = new Player();
+            player.AddHealer();
+            Assert.IsTrue(player.HasHealer);
+        }
+
+        [TestMethod]
+        public void AddBeast_Works()
+        {
+            var player = new Player();
+            player.AddBeast();
+            Assert.IsTrue(player.HasBeast);
+        }
+
+        [TestMethod]
+        public void AddSword_Works()
+        {
+            var player = new Player();
+            player.AddSword();
+            Assert.IsTrue(player.HasSword);
+        }
+
+        [TestMethod]
+        public void AddPegasus_Works()
+        {
+            var player = new Player();
+            player.AddPegasus();
+            Assert.IsTrue(player.HasPegasus);
+        }
+
+        [TestMethod]
+        public void AddBrassKey_Works()
+        {
+            var player = new Player();
+            player.AddBrassKey();
+            Assert.IsTrue(player.HasBrassKey);
+        }
+
+        [TestMethod]
+        public void AddSilverKey_Works()
+        {
+            var player = new Player();
+            player.AddSilverKey();
+            Assert.IsTrue(player.HasSilverKey);
+        }
+
+        [TestMethod]
+        public void AddGoldKey_Works()
+        {
+            var player = new Player();
+            player.AddGoldKey();
+            Assert.IsTrue(player.HasGoldKey);
+        }
+
+
+        [TestMethod]
         public void Gold_IsLimitedByWarriorCount()
         {
             var player = new Player();
